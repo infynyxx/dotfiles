@@ -1,0 +1,24 @@
+# Eclipse related .gitignore https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
+*.pydevproject
+.project
+.metadata
+.buildpath
+.settings
+bin/**
+     tmp/**
+     tmp/**/*
+              *.tmp
+              *.bak
+              *.swp
+              *~.nib
+              local.properties
+              .classpath
+              .settings/
+              .loadpath
+
+# CDT-specific
+# .cproject
+
+#vim
+.*.sw[a-z]
+*.un~
