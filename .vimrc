@@ -72,7 +72,7 @@ command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 
 " Formatting code
 set ts=4  " Tabs are 2 spaces
-set bs=4  " Backspace over everything in insert mode
+"set bs=4  " Backspace over everything in insert mode
 set shiftwidth=4  " Tabs under smart indent
 set nocp incsearch
 set cinoptions=:0,p0,t0
@@ -95,14 +95,11 @@ if has("gui_running")
   colorscheme molokai
 endif
 
-" Add F2 hot key for running Ruby programs
-map <f2> :w\|!clear;ruby %<cr>
-
-" Add F3 hot key for running rake
-map <f3> :w\|!clear;rake
-
 " Add F4 hot key for compiling C programs
 map <f4> :w\|!clear;gcc %<cr>
 
 " Set spellchecker only for *.txt files
 au BufNewFile,BufRead *.txt set spell
+
+" run file with PHP CLI (CTRL-M)
+:autocmd FileType php noremap <C-M> :w!<CR>:!/usr/bin/php %<CR>
