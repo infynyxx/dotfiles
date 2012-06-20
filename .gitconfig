@@ -1,5 +1,10 @@
 [user]
 	name = Prajwal Tuladhar
-	email = praj@prajwal-tuladhar.net.np
+	email = praj@praj@infynyxx.com
+
 [core]
-	editor = vim
+	editor = /usr/bin/vim
+	excludesfile = /Users/praj/.gitignore_global
+
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
