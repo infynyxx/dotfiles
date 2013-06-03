@@ -1,10 +1,30 @@
 [user]
-	name = Prajwal Tuladhar
-	email = praj@infynyxx.com
+    name = Prajwal Tuladhar
+    email = praj@infynyxx.com
 
 [core]
-	editor = /usr/bin/vim
-	excludesfile = /Users/praj/.gitignore_global
+    editor = /usr/bin/vim
+    excludesfile = ~/.gitignore_global
 
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    le = log --oneline --decorate
+    fl = log -u
+    dl = "!git ll -1" # Show modified files in last commit
+    dlc = diff --cached HEAD^ # Show a diff last commit
+    f = "!git ls-files | grep -i" # Find a file path in codebase | git f trenches
+    gr = grep -Ii # Search/grep your entire codebase for a string | git gr trenches
+    gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name -In $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f" # Grep from root folder
+    la = "!git config -l | grep alias | cut -c 7-" # output all your aliases
+    cp = cherry-pick
+    st = status -s
+    cl = clone
+    ci = commit
+    co = checkout
+    br = branch
+    diff = diff --word-diff
+    dc = diff --cached
