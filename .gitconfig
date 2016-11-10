@@ -1,6 +1,7 @@
 [user]
     name = Prajwal Tuladhar
     email = praj@infynyxx.com
+    signingkey = A37468702CDD3ADA
 
 [core]
     editor = /usr/bin/vim
@@ -28,3 +29,7 @@
     br = branch
     diff = diff --word-diff
     dc = diff --cached
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
