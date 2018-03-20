@@ -6,6 +6,7 @@
 [core]
     editor = /usr/bin/vim
     excludesfile = ~/.gitignore_global
+    pager = diff-so-fancy | less --tabs=4 -RFX # brew install diff-so-fancy
 
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
@@ -29,6 +30,6 @@
     diff = diff --word-diff
     dc = diff --cached
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
